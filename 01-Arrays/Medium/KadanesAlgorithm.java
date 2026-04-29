@@ -34,38 +34,6 @@ class Solution{
     return max;
   }
 
-  public void indicesMaximumSubarray(int[] nums){
-    long max = Long.MIN_VALUE;
-    long sum = 0;
-    int ansStart = -1;
-    int ansEnd = -1;
-    int start = 0;
-
-    for (int i=0; i<nums.length; i++){
-      if(sum == 0){
-        start = i;
-      }
-      
-      sum += nums[i];
-
-      if(sum > max){
-        max = sum;
-        ansStart = start;
-        ansEnd = i;
-      }
-
-      if(sum < 0){
-        sum = 0;
-      }
-    }
-
-    System.out.print("The maximum subarray sum is from index " + ansStart + " to " + ansEnd);
-    System.out.print("The maximum subarray elements: [");
-    for(int i=ansStart; i<=ansEnd; i++){
-      System.out.print(nums[i] + " ");
-    }
-    System.out.println("]");
-  }
 }
 
 public class KadanesAlgorithm {
