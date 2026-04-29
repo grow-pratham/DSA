@@ -48,7 +48,7 @@ public class KadanesAlgorithm {
       Solution sol = new Solution();
 
       System.out.println("Maximum subarray sum: " + sol.maximumSubarraySum(arr));
-      sol.indicesMaximumSubarray(arr);
+      
     }
   }
 }
